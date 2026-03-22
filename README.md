@@ -26,7 +26,7 @@ I chose **learning and self-assessment** as the domain because it forces a **str
 - Python 3, Flask, Flask-CORS  
 - Pydantic  
 - Google Gemini (`google-genai` — `from google import genai`)  
-- PyMongo (optional)
+- PyMongo 
 
 ## Environment
 
@@ -70,13 +70,11 @@ python app.py
 
 The app listens on `PORT` (default `5000`). Enable CORS for your frontend origin in dev (already enabled broadly via Flask-CORS for local use).
 
-If you still run this folder as a Python package named `backend` inside a parent monorepo, use: `python -m backend.app` from the parent directory instead.
-
 ## Deploy (e.g. Vercel)
 
 This repo can ship a serverless entry under `api/` (see `api/index.py` and `vercel.json`). Set the same environment variables in the hosting dashboard. Ensure MongoDB Atlas **Network Access** allows your host (e.g. `0.0.0.0/0` for serverless, or static egress IPs).
 
 ## Demo
 
-- **API base URL:** (add your deployed URL)  
-- **Partner frontend repo:** (link to your React app repo)
+- **API base URL:** ([Vercel url](https://quiz-chatbot-frontend-green.vercel.app/))  
+- **Partner frontend repo:** ([Frontend repo](https://github.com/Shiva082002/quiz-chatbot-frontend))
