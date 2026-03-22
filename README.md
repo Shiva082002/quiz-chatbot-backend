@@ -1,6 +1,6 @@
-# Thinkly — Backend (Quiz Master API)
+# Backend (Quiz Master API)
 
-Flask API for **Thinkly**: Gemini-powered quiz generation/evaluation, topic tutor chat, and optional MongoDB storage for anonymous quiz sessions. The client is a separate repo (React); point it at this service with `VITE_API_BASE_URL`.
+Flask API : Gemini-powered quiz generation/evaluation, topic tutor chat, and optional MongoDB storage for anonymous quiz sessions. The client is a separate repo (React); point it at this service with `VITE_API_BASE_URL`.
 
 ## Why this topic
 
