@@ -166,13 +166,17 @@ def create_app() -> Flask:
         offset = max(0, offset)
         limit = max(1, min(limit, 50))
 
-        sessions, total = list_quiz_sessions(offset=offset, limit=limit)
+        sessions, total, mongo_configured, query_succeeded = list_quiz_sessions(
+            offset=offset, limit=limit
+        )
         return jsonify(
             {
                 "sessions": sessions,
                 "total": total,
                 "offset": offset,
                 "limit": limit,
+                "mongoConfigured": mongo_configured,
+                "querySucceeded": query_succeeded,
             }
         )
 
@@ -182,6 +186,5 @@ def create_app() -> Flask:
 if __name__ == "__main__":
     port = int(os.getenv("PORT", "5000"))
     create_app().run(host="0.0.0.0", port=port, debug=True)
-    
-app = create_app()
 
+app = create_app()
