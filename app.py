@@ -5,8 +5,8 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from pydantic import ValidationError
 
-from backend.ai.quiz_agent import chat_reply, evaluate_answer, generate_batch_questions, generate_question
-from backend.ai.schemas import (
+from ai.quiz_agent import chat_reply, evaluate_answer, generate_batch_questions, generate_question
+from ai.schemas import (
     ChatRequest,
     EvaluateAnswerRequest,
     EvaluateAnswerResponse,
@@ -15,7 +15,7 @@ from backend.ai.schemas import (
     ChatResponse,
     QuizSessionSaveRequest,
 )
-from backend.db.mongo_sessions import list_quiz_sessions, save_quiz_session_document
+from db.mongo_sessions import list_quiz_sessions, save_quiz_session_document
 
 
 def create_app() -> Flask:
